@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*>*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+.header{
+    margin: 3px 12rem;
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(to top left, #b1d1b6 32%, #6dbbb1 97%);
+}
+
+.container{
+    display: flex;
+    gap: 10rem;
+    margin-top: 2%;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.container div{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 75vh;
+    background: linear-gradient(to top left, #b1d1b6 32%, #6dbbb1 97%);
+}
+
+.box1{
+    flex-basis: 40%;
+    overflow-y: scroll;
+}
+
+.box2{
+    flex-basis: 30%;
+    justify-content: center;
+}
+
+input{
+    background-color: #2d61c9;
+    color: white;
+    display: block;
+    border-radius: 10px;
+    width: 20rem;
+    padding: 16px 32px;
+    margin-top: 5px;
+    font-size: 1.3rem;
+    overflow-wrap: break-word;
+}
+
+.input-form textarea{
+    background-color: #2d61c9;
+    color: white;
+    width: 100%;
+    height: 59px;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.input-form{
+    margin-top: 20px;
+}
+
+.btn-primary{
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #8e45d3;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 5%;
+    /* margin-left: 30%; */
+}
+
+.btn-primary:hover{
+    background-color: rgb(72, 47, 73);
+}
+
+#hding{
+    text-align: center;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(#4671EA, #9b7eaa);
+    background-repeat: no-repeat;
+}
+
+table{
+    display: inline-block;
+    border-collapse: collapse;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    /* box-sizing: border-box; */
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+}
+
+table thead tr{
+    background-color: #0066ff;
+    border-radius: 5px;
+    height: 3rem;
+}
+
+table tr td{
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
+    height: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0;
+}
+
+table tr{
+    margin-top: 5px;
+}
+
+table tr:nth-child(even){
+    background-color: #c6dbcb;
+}
+
+#btn-td{
+    justify-content: center;
+    text-align: center;
+}
+
+table tr td button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+}
+
+td button:nth-child(1){
+    width: 50px;
+    margin-left: 5px;
+    background-color: rgb(98, 167, 152);
+}
+td button:nth-child(2){
+    background-color: rgb(202, 105, 105);
+}
+
+table tr td{
+    margin: 0;
+    padding: 0;
+}

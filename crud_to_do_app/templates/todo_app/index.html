@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <script src="https://kit.fontawesome.com/27cea3c3aa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <h1 id="hding">To-Do App</h1>
+    </div>
+    {% block child_block %}
+        <div class="container">
+            <div class="box1">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Task ToDo</th>
+                            <th>Time</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    {%for x in data%}
+                    <tr>
+                        <td>{{x.task_to_do}}</td>
+                        <td>{{x.by_when_to_do}}</td>
+                        <td id="btn-td"><button><a href="/update/{{x.id}}"><i class="fa-solid fa-pen-to-square"></i></a></button></td>
+                        <td id="btn-td"><button><a href="/delete/{{x.id}}"><i class="fa-solid fa-trash"></i></a></button></td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+            <div class="box2">
+                <form class="input-form" method="post">
+                    {%csrf_token%}
+                    <label for="to_do_task">ToDo Task</label>
+                    <textarea name="to_do_task" id="to_do_name" value="{{vals.task_to_do}}" autocomplete="off" cols="30" rows="10"></textarea>
+                    <label for="to_do_time">ToDo datetime</label>
+                    <input type="datetime-local"  id="to_do_time" name="to_do_time" value="{{date}}"/>
+                    <button class="btn-primary" type="submit">Submit</button>
+                    <button class="btn-primary"><a href=""><i class="fa-solid fa-trash"></i></a></button></button>
+                </form>
+            </div>
+        </div>
+    {%endblock%}
+    
+</body>
+</html>
